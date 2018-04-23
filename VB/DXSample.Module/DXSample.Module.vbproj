@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{997F0C09-FE07-4240-88E3-B5E78F94619A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>DXSample.Module</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v13.2.Core">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.Printing.v13.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.Data.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.ExpressApp.Xpo.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.ExpressApp.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.ExpressApp.Objects.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.ExpressApp.Validation.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.Persistent.Base.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.Persistent.BaseImpl.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v13.2">
+      <Private>True</Private>
+      <HintPath>c:\Projects\Test_Examples\TestFolder\Dlls\13.2.5\DevExpress.Xpo.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TestObject.vb" />
+    <Compile Include="ImmediateValidationController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.vb">
+      <DependentUpon>Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Updater.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

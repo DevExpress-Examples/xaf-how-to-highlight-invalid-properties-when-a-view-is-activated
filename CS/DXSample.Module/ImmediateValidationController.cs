@@ -22,7 +22,8 @@ namespace DXSample.Module {
         protected override void OnActivated() {
             base.OnActivated();
             ObjectSpace.ObjectChanged += ObjectSpace_ObjectChanged;
-            View.CurrentObjectChanged += View_CurrentObjectChanged;
+            ObjectSpace.ObjectReloaded += ObjectSpace_ObjectReloaded;
+            View.CurrentObjectChanged += View_CurrentObjectChanged;            
         }
         protected override void OnViewControlsCreated() {
             base.OnViewControlsCreated();
@@ -32,6 +33,9 @@ namespace DXSample.Module {
             ValidateViewObjects();
         }
         private void ObjectSpace_ObjectChanged(object sender, ObjectChangedEventArgs e) {
+            ValidateViewObjects();
+        }
+        private void ObjectSpace_ObjectReloaded(object sender, ObjectManipulatingEventArgs e) {
             ValidateViewObjects();
         }
         private void ValidateViewObjects() {
@@ -59,6 +63,7 @@ namespace DXSample.Module {
         protected override void OnDeactivated() {
             base.OnDeactivated();
             ObjectSpace.ObjectChanged -= ObjectSpace_ObjectChanged;
+            ObjectSpace.ObjectReloaded -= ObjectSpace_ObjectReloaded;
             View.CurrentObjectChanged -= View_CurrentObjectChanged;
         }
     }

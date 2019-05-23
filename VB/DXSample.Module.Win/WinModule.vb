@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ComponentModel
@@ -7,9 +6,10 @@ Imports System.ComponentModel
 Imports DevExpress.ExpressApp
 
 Namespace DXSample.Module.Win
-	<ToolboxItemFilter("Xaf.Platform.Win")> _
+	<ToolboxItemFilter("Xaf.Platform.Win")>
 	Public NotInheritable Partial Class DXSampleWindowsFormsModule
 		Inherits ModuleBase
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub

@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 
 Imports DevExpress.Xpo
 
@@ -10,14 +9,15 @@ Imports DevExpress.Persistent.Validation
 Imports DevExpress.ExpressApp.Editors
 
 Namespace DXSample.Module
-	<DefaultClassOptions> _
+	<DefaultClassOptions>
 	Public Class TestObject
 		Inherits BaseObject
+
 		Public Sub New(ByVal session As Session)
 			MyBase.New(session)
 		End Sub
 		Private _Error As String
-		<RuleRequiredField(ResultType := ValidationResultType.Error)> _
+		<RuleRequiredField(ResultType := ValidationResultType.Error)>
 		Public Property [Error]() As String
 			Get
 				Return _Error
@@ -27,7 +27,7 @@ Namespace DXSample.Module
 			End Set
 		End Property
 		Private _Warning As String
-		<RuleRequiredField(ResultType := ValidationResultType.Warning)> _
+		<RuleRequiredField(ResultType := ValidationResultType.Warning)>
 		Public Property Warning() As String
 			Get
 				Return _Warning
@@ -37,7 +37,7 @@ Namespace DXSample.Module
 			End Set
 		End Property
 		Private _Information As String
-		<RuleRequiredField(ResultType := ValidationResultType.Information)> _
+		<RuleRequiredField(ResultType := ValidationResultType.Information)>
 		Public Property Information() As String
 			Get
 				Return _Information

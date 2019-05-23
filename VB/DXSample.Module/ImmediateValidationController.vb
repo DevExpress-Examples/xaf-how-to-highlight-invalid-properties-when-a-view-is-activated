@@ -25,6 +25,7 @@ Namespace DXSample.Module
 		Protected Overrides Sub OnActivated()
 			MyBase.OnActivated()
 			AddHandler ObjectSpace.ObjectChanged, AddressOf ObjectSpace_ObjectChanged
+			AddHandler ObjectSpace.ObjectReloaded, AddressOf ObjectSpace_ObjectReloaded
 			AddHandler View.CurrentObjectChanged, AddressOf View_CurrentObjectChanged
 		End Sub
 		Protected Overrides Sub OnViewControlsCreated()
@@ -32,6 +33,9 @@ Namespace DXSample.Module
 			ValidateViewObjects()
 		End Sub
 		Private Sub View_CurrentObjectChanged(ByVal sender As Object, ByVal e As EventArgs)
+			ValidateViewObjects()
+		End Sub
+		Private Sub ObjectSpace_ObjectReloaded(ByVal sender As Object, ByVal e As ObjectManipulatingEventArgs)
 			ValidateViewObjects()
 		End Sub
 		Private Sub ObjectSpace_ObjectChanged(ByVal sender As Object, ByVal e As ObjectChangedEventArgs)
@@ -64,6 +68,7 @@ Namespace DXSample.Module
 		Protected Overrides Sub OnDeactivated()
 			MyBase.OnDeactivated()
 			RemoveHandler ObjectSpace.ObjectChanged, AddressOf ObjectSpace_ObjectChanged
+			RemoveHandler ObjectSpace.ObjectReloaded, AddressOf ObjectSpace_ObjectReloaded
 			RemoveHandler View.CurrentObjectChanged, AddressOf View_CurrentObjectChanged
 		End Sub
 	End Class

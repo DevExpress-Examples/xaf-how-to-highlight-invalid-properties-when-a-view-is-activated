@@ -1,4 +1,6 @@
-﻿Namespace DXSample.Win
+Imports Microsoft.VisualBasic
+Imports System
+Namespace DXSample.Win
 	Partial Public Class DXSampleWindowsFormsApplication
 		''' <summary> 
 		''' Required designer variable.
@@ -65,8 +67,7 @@
 			Me.Modules.Add(Me.module7)
 			Me.Modules.Add(Me.securityModule1)
 			Me.Security = Me.securitySimple1
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.DXSampleWindowsFormsApplication_DatabaseVersionMismatch);
+'			Me.DatabaseVersionMismatch += New System.EventHandler(Of DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs)(Me.DXSampleWindowsFormsApplication_DatabaseVersionMismatch);
 			CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
 		End Sub

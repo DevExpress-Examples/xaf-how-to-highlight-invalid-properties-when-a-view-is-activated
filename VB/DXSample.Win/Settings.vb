@@ -1,4 +1,6 @@
-﻿Namespace My
+﻿Imports Microsoft.VisualBasic
+Imports System
+Namespace My
 
 
 	' This class allows you to handle specific events on the settings class:

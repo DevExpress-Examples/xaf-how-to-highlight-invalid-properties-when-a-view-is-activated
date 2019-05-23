@@ -1,4 +1,6 @@
-﻿Namespace DXSample.Module
+Imports Microsoft.VisualBasic
+Imports System
+Namespace DXSample.Module
 	Partial Public Class DXSampleModule
 		''' <summary> 
 		''' Required designer variable.

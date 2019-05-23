@@ -1,4 +1,5 @@
-﻿Imports System
+Imports Microsoft.VisualBasic
+Imports System
 Imports System.ComponentModel
 Imports System.Collections.Generic
 Imports System.Diagnostics
@@ -15,14 +16,12 @@ Imports DevExpress.ExpressApp.Editors
 Namespace DXSample.Module
 	Public Class ImmediateValidationTargetObjectsSelector
 		Inherits ValidationTargetObjectSelector
-
 		Protected Overrides Function NeedToValidateObject(ByVal objectSpace As IObjectSpace, ByVal targetObject As Object) As Boolean
 			Return True
 		End Function
 	End Class
 	Public Class ImmediateValidationController
 		Inherits ViewController
-
 		Protected Overrides Sub OnActivated()
 			MyBase.OnActivated()
 			AddHandler ObjectSpace.ObjectChanged, AddressOf ObjectSpace_ObjectChanged
@@ -36,16 +35,16 @@ Namespace DXSample.Module
 		Private Sub View_CurrentObjectChanged(ByVal sender As Object, ByVal e As EventArgs)
 			ValidateViewObjects()
 		End Sub
-		Private Sub ObjectSpace_ObjectChanged(ByVal sender As Object, ByVal e As ObjectChangedEventArgs)
+		Private Sub ObjectSpace_ObjectReloaded(ByVal sender As Object, ByVal e As ObjectManipulatingEventArgs)
 			ValidateViewObjects()
 		End Sub
-		Private Sub ObjectSpace_ObjectReloaded(ByVal sender As Object, ByVal e As ObjectManipulatingEventArgs)
+		Private Sub ObjectSpace_ObjectChanged(ByVal sender As Object, ByVal e As ObjectChangedEventArgs)
 			ValidateViewObjects()
 		End Sub
 		Private Sub ValidateViewObjects()
 			If TypeOf View Is ListView Then
-				If Not CType(View, ListView).CollectionSource.IsServerMode Then
-					ValidateObjects(CType(View, ListView).CollectionSource.List)
+				If Not(CType(View, ListView)).CollectionSource.IsServerMode Then
+					ValidateObjects((CType(View, ListView)).CollectionSource.List)
 				End If
 			ElseIf TypeOf View Is DetailView Then
 				Dim objectsSelector As New ImmediateValidationTargetObjectsSelector()

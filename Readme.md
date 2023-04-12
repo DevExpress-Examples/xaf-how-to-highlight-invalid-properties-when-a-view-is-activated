@@ -6,8 +6,8 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [ImmediateValidationController.cs](./CS/DXSample.Module/ImmediateValidationController.cs) (VB: [ImmediateValidationController.vb](./VB/DXSample.Module/ImmediateValidationController.vb))
-* [TestObject.cs](./CS/DXSample.Module/TestObject.cs) (VB: [TestObject.vb](./VB/DXSample.Module/TestObject.vb))
+* [ImmediateValidationController.cs](./CS/DXSample.Module/ImmediateValidationController.cs)
+* [TestObject.cs](./CS/DXSample.Module/TestObject.cs)
 <!-- default file list end -->
 # Validation - How to highlight invalid properties when the View is shown
 

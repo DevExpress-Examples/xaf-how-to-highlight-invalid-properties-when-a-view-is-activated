@@ -10,10 +10,10 @@ namespace ValidateHighlight.Module {
     [DefaultClassOptions]
     public class TestObject : BaseObject {
         [RuleRequiredField(ResultType = ValidationResultType.Error)]
-        public string Error { get; set; }
+        public virtual string Error { get; set; }
         [RuleRequiredField(ResultType = ValidationResultType.Warning)]
-        public string Warning { get; set; }
+        public virtual  string Warning { get; set; }
         [RuleRequiredField(ResultType = ValidationResultType.Information)]
-        public string Information { get; set; }
+        public virtual string Information { get; set; }
     }
 }

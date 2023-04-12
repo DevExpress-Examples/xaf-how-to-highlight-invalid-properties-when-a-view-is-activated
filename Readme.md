@@ -20,5 +20,6 @@
 <p>Warning and Information rules support is added.</p>
 
 <br/>
+![image](https://user-images.githubusercontent.com/14300209/231460334-e1460828-0d91-4d0f-9fbc-1175b3c22404.png)
 
 

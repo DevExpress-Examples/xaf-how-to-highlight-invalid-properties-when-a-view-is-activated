@@ -6,8 +6,8 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [ImmediateValidationController.cs](./CS/DXSample.Module/ImmediateValidationController.cs)
-* [TestObject.cs](./CS/DXSample.Module/TestObject.cs)
+* [ImmediateValidationController.cs](./CS/EFCore/ValidateHighlightEF/ValidateHighlightEF.Module/Controllers/ImmediateValidationController.cs)
+* [TestObject.cs](./CS/EFCore/ValidateHighlightEF/ValidateHighlightEF.Module/BusinessObjects/TestObject.cs )
 <!-- default file list end -->
 # Validation - How to highlight invalid properties when the View is shown
 
@@ -15,11 +15,7 @@
 <p>This example demonstrates, how to check rules when the View is activated, or the View's object is changed. For that purpose, the ImmediateValidationController is implemented. To avoid checking these rules when the business object is saved or deleted, their context is set to Custom.</p>
 
 
-<h3>Description</h3>
 
-<p>Warning and Information rules support is added.</p>
-
-<br/>
 
 
 ![image](https://user-images.githubusercontent.com/14300209/231460334-e1460828-0d91-4d0f-9fbc-1175b3c22404.png)

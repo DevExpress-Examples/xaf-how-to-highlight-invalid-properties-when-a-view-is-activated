@@ -35,7 +35,7 @@ public class ValidateHighlightEFDesignTimeDbContextFactory : IDesignTimeDbContex
 public class ValidateHighlightEFEFCoreDbContext : DbContext {
 	public ValidateHighlightEFEFCoreDbContext(DbContextOptions<ValidateHighlightEFEFCoreDbContext> options) : base(options) {
 	}
-    public DbSet<TestObject> TestObject { get; set; }
+    public DbSet<TestObject> TestObjects { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
         base.OnModelCreating(modelBuilder);

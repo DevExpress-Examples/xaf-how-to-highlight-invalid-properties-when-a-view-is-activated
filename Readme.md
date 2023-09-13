@@ -12,7 +12,7 @@
 # Validation - How to highlight invalid properties when the View is shown
 
 
-<p>This example demonstrates, how to check rules when the View is activated, or the View's object is changed. For that purpose, the ImmediateValidationController is implemented. To avoid checking these rules when the business object is saved or deleted, their context is set to Custom.</p>
+By default XAF [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module) validates object when a user saves or deletes an object. This example demonstrates, how to check rules when a user activates a View, or changes a View's object. For that purpose, we created the [ImmediateValidationController.cs](./CS/EFCore/ValidateHighlightEF/ValidateHighlightEF.Module/Controllers/ImmediateValidationController.cs). 
 
 
 

@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# XAF - How to Highlight Invalid Properties in an Invoked View
+# XAF - How to Highlight Invalid Properties Immediately in an Invoked View
 
 Normally, XAF [Validation Module](https://docs.devexpress.com/eXpressAppFramework/113684/validation-module) validates data when a user saves or deletes an object. This example demonstrates how to check validation rules when a user activates a View or changes the View's object.
 

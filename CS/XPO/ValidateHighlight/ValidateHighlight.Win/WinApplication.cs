@@ -14,7 +14,6 @@ public class ValidateHighlightWindowsFormsApplication : WinApplication {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "ValidateHighlight";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-        UseOldTemplates = false;
         DatabaseVersionMismatch += ValidateHighlightWindowsFormsApplication_DatabaseVersionMismatch;
         CustomizeLanguagesList += ValidateHighlightWindowsFormsApplication_CustomizeLanguagesList;
     }
